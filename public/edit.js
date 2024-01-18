@@ -7,9 +7,9 @@ const post_id = window.location.toString().split("/")[
   const updateChessPostFormHandler = async (event) => {
     event.preventDefault();
   
-    const title = document.querySelector("#title-update-chess-post").value.trim();
+    const title = document.querySelector("#title-update-post").value.trim();
     const content = document
-      .querySelector("#content-update-chess-post")
+      .querySelector("#content-update-post")
       .value.trim();
   
     if (title && content) {
@@ -43,13 +43,13 @@ const post_id = window.location.toString().split("/")[
   };
   
   // Event listeners
-  const updateChessPostButton = document.querySelector("#update-chess-post");
+  const updateChessPostButton = document.querySelector("#update-post");
   
   if (updateChessPostButton) {
     updateChessPostButton.addEventListener("click", updateChessPostFormHandler);
   }
   
-  const deleteChessPostButton = document.querySelector("#delete-chess-post");
+  const deleteChessPostButton = document.querySelector("#delete-post");
   
   if (deleteChessPostButton) {
     deleteChessPostButton.addEventListener("click", deleteChessPostFormHandler);

@@ -1,9 +1,9 @@
-const newChessCommentFormHandler = async (event) => {
+const newCommentFormHandler = async (event) => {
     event.preventDefault();
   
     const post_id = parseInt(window.location.pathname.split('/').pop());
   
-    const content = document.querySelector('#content-new-chess-comment').value.trim();
+    const content = document.querySelector('#content-new-comment').value.trim();
   
     if (content) {
       const response = await fetch(`/api/comments`, {

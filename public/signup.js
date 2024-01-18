@@ -1,5 +1,5 @@
 // Signup request
-const chessSignupFormHandler = async (event) => {
+const SignupFormHandler = async (event) => {
     event.preventDefault();
   
     const username = document.querySelector('#username').value.trim();
@@ -22,7 +22,7 @@ const chessSignupFormHandler = async (event) => {
   };
   
   // Event listener
-  const chessSignupForm = document.querySelector('#signup-form');
-  if (chessSignupForm) {
-    chessSignupForm.addEventListener('submit', chessSignupFormHandler);
+  const SignupForm = document.querySelector('#signup-form');
+  if (SignupForm) {
+    SignupForm.addEventListener('submit', SignupFormHandler);
   }

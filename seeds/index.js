@@ -1,26 +1,21 @@
-const seedCategories = require('./category-seeds');
-const seedProducts = require('./product-seeds');
-const seedTags = require('./tag-seeds');
-const seedProductTags = require('./product-tag-seeds');
+// Importing the seed data functions
+const seedUsers = require("./UserData");
+const seedPosts = require("./postData");
+const seedComments = require("./commentData");
 
-const sequelize = require('../config/connection');
+// Importing the sequelize connection from ../config/connection
+const sequelize = require("../config/connection");
 
+// Function to seed all data by calling the three seed functions in sequence
 const seedAll = async () => {
+    // Syncing the sequelize models and wiping out the tables
   await sequelize.sync({ force: true });
-  console.log('\n----- DATABASE SYNCED -----\n');
-  await seedCategories();
-  console.log('\n----- CATEGORIES SEEDED -----\n');
-
-  await seedProducts();
-  console.log('\n----- PRODUCTS SEEDED -----\n');
-
-  await seedTags();
-  console.log('\n----- TAGS SEEDED -----\n');
-
-  await seedProductTags();
-  console.log('\n----- PRODUCT TAGS SEEDED -----\n');
-
+  // Calling each of the seed data functions
+  await seedUsers();
+  await seedPosts();
+  await seedComments();
+  // Exiting the process with a successful exit code
   process.exit(0);
 };
-
+// Calling the seedAll function to seed the database
 seedAll();
