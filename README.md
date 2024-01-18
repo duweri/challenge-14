@@ -32,3 +32,7 @@ WHEN I click on the logout option in the navigation
 THEN I am signed out of the site
 WHEN I am idle on the site for more than a set time
 THEN I am able to view posts and comments but I am prompted to log in again before I can add, update, or delete posts
+
+# Description:
+
+The objective in developing this application was to create a scalable and resilient platform that could handle numerous users, blog posts, and comments. The programme was created with security in mind, allowing users to verify themselves while protecting their personal information. Furthermore, the application needed to be designed with contemporary web development tools and best practices, such as the MVC architecture pattern.
